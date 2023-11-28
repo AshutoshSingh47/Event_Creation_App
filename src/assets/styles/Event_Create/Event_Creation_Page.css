@@ -1,0 +1,152 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=Poppins:wght@200;300;400;500;600&display=swap");
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Montserrat", "sans-serif";
+}
+
+body {
+  background: rgb(238, 174, 202);
+  background: radial-gradient(
+    circle,
+    rgba(238, 174, 202, 1) 0%,
+    rgba(148, 187, 233, 1) 100%
+  );
+}
+
+:root {
+  --primary-color: #fff;
+  --input-background: #eee;
+  --calendar-month-background: #595959;
+  --button-color: #000;
+}
+.container {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+.event-page-form {
+  padding: 5rem;
+  width: 50%;
+}
+
+.event-form {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  padding: 5rem;
+  border-radius: 0.5rem;
+  background: var(--primary-color);
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+}
+
+.event-name {
+  outline: none;
+  background: transparent;
+  height: 3rem;
+  font-size: 2rem;
+  font-weight: 600;
+  border: none;
+}
+
+.calendar-icons {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 1rem;
+  border: solid 2px var(--input-background);
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.month-icon {
+  border-top-right-radius: 0.8rem;
+  border-top-left-radius: 0.8rem;
+  height: 1.8rem;
+  width: 100%;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--calendar-month-background);
+  background-color: var(--input-background);
+}
+
+.date-icon {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: var(--calendar-month-background);
+}
+
+label {
+  margin: 0 1rem 0 0;
+}
+
+.input-end label {
+  margin: 0 1.4rem 0 0;
+}
+
+.input-start,
+.input-end {
+  line-height: 2rem;
+  display: flex;
+  gap: 2rem;
+}
+
+.input-containers {
+  padding: 1rem 0;
+}
+
+.date {
+  padding: 1rem;
+  height: 2rem;
+  outline: none;
+  background-color: var(--input-background);
+  cursor: pointer;
+}
+
+.event-start-date,
+.event-end-date {
+  margin: 0 0.1rem 0 0;
+  width: 9rem;
+  border: none;
+  border-top-left-radius: 0.2rem;
+  border-bottom-left-radius: 0.2rem;
+}
+
+.event-start-time,
+.event-end-time {
+  border: none;
+  width: 8rem;
+  border-top-right-radius: 0.2rem;
+  border-bottom-right-radius: 0.2rem;
+}
+
+.add-event {
+  height: auto;
+  padding: 0.6rem 0;
+  border-radius: 0.4rem;
+  background-color: var(--button-color);
+  color: var(--primary-color);
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.trash svg {
+  width: 2rem;
+  height: 2rem;
+  cursor: pointer;
+}
+
+@media (max-width: 1431px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
+  .event-page-form {
+    width: auto;
+    padding: 1rem;
+    margin: auto auto;
+  }
+}
